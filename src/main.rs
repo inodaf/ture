@@ -1,9 +1,9 @@
 mod modules;
 
 fn main() {
-  let fahrenheit = modules::conversion_service::to_fahrenheit(32);
-  let celsius = modules::conversion_service::to_celsius(19);
+  let fahrenheit = modules::conversions::to_fahrenheit(32);
+  let celsius = modules::conversions::to_celsius(46);
 
-  println!("Celsius to Fahrenheit = {}", fahrenheit);
-  println!("Fahrenheit to Celsius = {}", celsius);
+  println!("Celsius to Fahrenheit = {}F°", fahrenheit);
+  println!("Fahrenheit to Celsius = {}C°", celsius);
 }
