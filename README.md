@@ -1,4 +1,4 @@
-# 🌧 Temperature Convert CLI
+# 🌧 Ture CLI
 A CLI App to convert Fahrenheit to Celsius and vice-versa.
 
 ## Use Cases

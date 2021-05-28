@@ -8,9 +8,9 @@ const MESSAGES: [&str; 4] = [
 pub fn print_celsius(celsius: i32) -> &'static str {
     let message: &str = if celsius <= 16 {
         MESSAGES[0]
-    } else if celsius >= 17 || celsius <= 26 {
+    } else if celsius >= 17 && celsius <= 26 {
         MESSAGES[1]
-    } else if celsius >= 27 || celsius <= 33 {
+    } else if celsius >= 27 && celsius <= 33 {
         MESSAGES[2]
     } else {
         MESSAGES[3]
@@ -22,9 +22,9 @@ pub fn print_celsius(celsius: i32) -> &'static str {
 pub fn print_fahrenheint(fahrenheit: i32) -> &'static str {
     let message: &str = if fahrenheit <= 59 {
         MESSAGES[0]
-    } else if fahrenheit >= 60 || fahrenheit <= 77 {
+    } else if fahrenheit >= 60 && fahrenheit <= 77 {
         MESSAGES[1]
-    } else if fahrenheit >= 78 || fahrenheit <= 90 {
+    } else if fahrenheit >= 78 && fahrenheit <= 90 {
         MESSAGES[2]
     } else {
         MESSAGES[3]

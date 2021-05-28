@@ -1,12 +1,29 @@
+use std::env;
+
 mod modules;
 
+fn handle_celsius(degrees: i32) {
+    let conversion: i32 = modules::conversions::to_fahrenheit(degrees);
+    modules::presenters::print_conversion(modules::presenters::print_fahrenheint, conversion)
+}
+
+fn handle_fahrenheit(degrees: i32) {
+    let conversion: i32 = modules::conversions::to_celsius(degrees);
+    modules::presenters::print_conversion(modules::presenters::print_celsius, conversion);
+}
+
 fn main() {
-  let fahrenheit = modules::conversions::to_fahrenheit(32);
-  let celsius = modules::conversions::to_celsius(46);
+    let args: Vec<String> = env::args().collect();
 
-  modules::presenters::print_conversion(modules::presenters::print_celsius, celsius);
-  modules::presenters::print_conversion(modules::presenters::print_fahrenheint, fahrenheit);
+    let unit: &str = &args[1].to_lowercase();
+    let degrees: i32 = match args[2].trim().parse() {
+        Ok(num) => num,
+        Err(_) => panic!(),
+    };
 
-  println!("32 Celsius to Fahrenheit = {}F°", fahrenheit);
-  println!("46 Fahrenheit to Celsius = {}C°", celsius);
+    match unit {
+        "c" => handle_celsius(degrees),
+        "f" => handle_fahrenheit(degrees),
+        _ => panic!(),
+    };
 }
