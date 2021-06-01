@@ -1,17 +1,28 @@
-# 🌧 Ture CLI
-A CLI App to convert Fahrenheit to Celsius and vice-versa.
+# 🌡 Ture
+A study project on the Rust Language that implements a CLI App for converting the temperatures unities Fahrenheit to Celsius and vice-versa.
 
-## Use Cases
-- The user should be able to enter the temperature expression in runtime `32f` or `32c` or `32F` etc;
-- The default conversion must be C -> F;
+## Getting Started
+Download the latest binary file from the Releases page. You don't need any external dependencies or tools to run the CLI app.
 
-## Requirements
-- Work with `mod`;
-- Test all integrations;
-- Release a binary;
+## Usage
+Type the following commands in your Terminal for converting temparatures. They will print the conversion along with a handy message.
 
-F -> C Formula
-T(ºC) = (T(ºF) - 32) x 5 / 9
+### Celsius → Fahrenheit
+```sh
+$ ./ture c 190
 
-C -> F Formula
-T(ºF) = (T(ºC)) x 9/5 + 32
+190C° = 374F°, ☀️  High temperature ahead
+```
+
+### Fahrenheit → Celsius
+```sh
+$ ./ture f 32
+
+32F° = 0C°, 🌨  Low temperature ahead
+```
+
+## Study Topics
+[] Use Rust Module system
+[] Panics handling
+[] Write unit tests
+[] Release the binary
