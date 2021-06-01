@@ -22,7 +22,7 @@ $ ./ture f 32
 ```
 
 ## Study Topics
-[] Use Rust Module system
-[] Panics handling
-[] Write unit tests
-[] Release the binary
+- [x] Use Rust Module system
+- [ ] Panics handling
+- [ ] Write unit tests
+- [ ] Release the binary
