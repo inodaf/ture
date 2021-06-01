@@ -4,12 +4,12 @@ mod modules;
 
 fn handle_celsius(degrees: i32) {
     let conversion: i32 = modules::conversions::to_fahrenheit(degrees);
-    modules::presenters::print_conversion(modules::presenters::print_fahrenheint, conversion)
+    modules::presenters::print_fahrenheint(&conversion, ("C", &degrees))
 }
 
 fn handle_fahrenheit(degrees: i32) {
     let conversion: i32 = modules::conversions::to_celsius(degrees);
-    modules::presenters::print_conversion(modules::presenters::print_celsius, conversion);
+    modules::presenters::print_celsius(&conversion, ("F", &degrees))
 }
 
 fn main() {
